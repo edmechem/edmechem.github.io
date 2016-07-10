@@ -2,8 +2,7 @@
 
 What to change in the [Getting Started with Rails](http://guides.rubyonrails.org/getting_started.html) simple Blog project, to enable it to be hosted on [Heroku](https://www.heroku.com).
 
-**TL;DR:** you need to change the database from **SQLite** to **PostgreSQL**.  
-Here's how.
+**TL;DR:** you need to change the database from **SQLite** to **PostgreSQL**.
 
 This presumes you've completed the project, and have it up and running on your local machine.
 
@@ -51,6 +50,6 @@ From command line, do the following:
 
 Make sure it all works. If so, then you're ready to follow the steps in the [Getting Started with Rails 5.x on Heroku](https://devcenter.heroku.com/articles/getting-started-with-rails5) guide to migrate it to Heroku.
 
-That page didn't quite explain the `database.yml` changes that were necessary; this page [How To Setup Ruby on Rails with Postgres](https://www.digitalocean.com/community/tutorials/how-to-setup-ruby-on-rails-with-postgres) had some example settings I used as guide to setting up mine.
+That page didn't quite explain the `database.yml` changes; [How To Setup Ruby on Rails with Postgres](https://www.digitalocean.com/community/tutorials/how-to-setup-ruby-on-rails-with-postgres) had some examples I used as guide to setting up mine.
 
-v. 1.0, 2016.07.09 - [Ed Mechem](https://github.com/edmechem)
+v. 1.0, 2016.07.10 - [Ed Mechem](https://github.com/edmechem)
