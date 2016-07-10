@@ -1,25 +1,24 @@
 ### Modifying Rails Blog to run on Heroku
-v. 1.0, 2016.07.09 - [Ed Mechem](https://github.com/edmechem)
 
-This document details changes needed to be made to the [Getting Started with Rails](http://guides.rubyonrails.org/getting_started.html) simple Blog project, to enable it to be hosted on [Heroku](https://www.heroku.com).
+What to change in the [Getting Started with Rails](http://guides.rubyonrails.org/getting_started.html) simple Blog project, to enable it to be hosted on [Heroku](https://www.heroku.com).
 
-**TL;DR:** you need to change the database from **sqlite** to **pgsql**.  
-This document explains how.
+**TL;DR:** you need to change the database from **SQLite** to **PostgreSQL**.  
+Here's how.
 
 This presumes you've completed the project, and have it up and running on your local machine.
 
 
-**1. Quit Rails** ```ctrl-C``` on command line to quit rails server.
+**1. Quit Rails** `ctrl-C` on command line to quit rails server.
 
 **2. Modify Gemfile**
 
-- Delete or comment out ```gem 'sqlite'``` and add ```gem 'pg'```
-- Also useful to specify version of ruby, i.e. ```ruby "2.3.0"``` (or whatever version you're running).
-- Lastly run ```bundle install``` from command line to update Gemfile.lock
+- Delete or comment out `gem 'sqlite'` and add `gem 'pg'`
+- Also useful to specify version of ruby, i.e. `ruby "2.3.0"` (or whatever version you're running).
+- Lastly run `bundle install` from command line to update Gemfile.lock
 
 **3. Modify database.yml**
 
-Comment out all the existing sqlite3 stuff. Add in the following:
+Delete or comment out all the existing sqlite3 stuff. Add in the following:
 
 ```
 default: &default
@@ -44,15 +43,14 @@ production:
 
 From command line, do the following:
 
-```
-rake db:setup
-bin/rails db:migrate
-bin/rails server
-```
+`rake db:setup`  
+`bin/rails db:migrate`  
+`bin/rails server`
 
 **5. Test it out locally.**
 
 Make sure it all works. If so, then you're ready to follow the steps in the [Getting Started with Rails 5.x on Heroku](https://devcenter.heroku.com/articles/getting-started-with-rails5) guide to migrate it to Heroku.
 
-That page didn't quite explain the ```database.yml``` changes that were necessary; some googling found this page: [How To Setup Ruby on Rails with Postgres](https://www.digitalocean.com/community/tutorials/how-to-setup-ruby-on-rails-with-postgres) - which had some example settings I used as guide to setting up mine.
+That page didn't quite explain the `database.yml` changes that were necessary; this page [How To Setup Ruby on Rails with Postgres](https://www.digitalocean.com/community/tutorials/how-to-setup-ruby-on-rails-with-postgres) had some example settings I used as guide to setting up mine.
 
+v. 1.0, 2016.07.09 - [Ed Mechem](https://github.com/edmechem)
