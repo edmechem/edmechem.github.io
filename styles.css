@@ -1,3 +1,11 @@
+* {
+  /*outline: 1px solid red;*/
+}
+
+.debug {
+  /*outline: 1px solid red;*/
+}
+
 body {
   font-family: "Helvetica", Helvetica, sans-serif;
   margin-left: 30px;
@@ -5,29 +13,20 @@ body {
   text-align: center;
 }
 
-.debug {
-  /*outline: 1px solid red;*/
-}
-
-* {
-  /*outline: 1px solid red;*/
-}
-
-
-a {
+a.glowy {
   text-decoration: none;
   color: black;
 }
 
-a:hover {
-    -webkit-animation-name: shiny;
+a.glowy:hover {
+    -webkit-animation-name: glowy;
     -webkit-animation-duration: 1s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-direction: alternate;
     -webkit-animation-timing-function: ease-in-out;
 }
 
-@-webkit-keyframes shiny {
+@-webkit-keyframes glowy {
     from { }
     to {
         text-shadow: 0 0 20px #000;
