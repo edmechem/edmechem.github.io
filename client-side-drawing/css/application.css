@@ -1,0 +1,78 @@
+body {
+  background-color: #EEEEEE;
+}
+
+.container {
+  margin: 0px 20px 0px 20px;  /*top right bottom left*/
+  padding: 0px 5px 0px 5px;
+  width: 96%;
+  /*text-align: center;*/
+}
+
+h1 {
+  font-family: 'Comfortaa', cursive;
+  font-size: 48px;
+  /*color: white;*/
+  /*background-color: darkgray;*/
+  margin: 10px 0px 5px 0px;  /*top right bottom left*/
+}
+
+div#center_div {
+  width: 100%;
+  text-align: center;
+}
+
+ul.tabs {
+  list-style: none;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.tabs li {
+  font-family: 'Comfortaa', cursive;
+  font-size: 14px;
+  display: inline;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+
+.glowy {
+  text-decoration: none;
+  color: #222222;
+}
+
+.glowy:hover {
+    -webkit-animation-name: glowy;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes glowy {
+    from {
+      color: black;
+    }
+    to {
+      color: blue;
+      text-shadow: 0 0 20px #8533FF;
+    }
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+
+#canvas {
+  /*border: 2px solid white;*/
+  background-color: #222222;
+}
+
